@@ -15,7 +15,7 @@ Some useful commands.
 #### Capture the DB
 
 	heroku pg:backups:capture
-	###Download the DB
+#### Download the DB
 	heroku pg:backups:download
 #### Then to load the DB as the local db
 
