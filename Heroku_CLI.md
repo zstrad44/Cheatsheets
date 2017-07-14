@@ -1,19 +1,22 @@
 Some useful commands.
 
-## Deploy staging
+### Clone existing heroku app
 
-    ```git push staging master```
+    heroku git:clone -a [existing app name]
+### Deploy staging
 
-## Add new instance for git deploy
+    git push staging master
 
-    ```git remote add staging git@heroku.com:appname.git```
+### Add new instance for git deploy
 
-## Capture and Download database postgress/ ruby
+    git remote add staging git@heroku.com:appname.git
 
-	```###Capture the DB
+### Capture and Download database postgress/ ruby
+#### Capture the DB
+
 	heroku pg:backups:capture
 	###Download the DB
 	heroku pg:backups:download
+#### Then to load the DB as the local db
 
-	### Then to load the DB as the local db, you will run:
-	pg_restore --verbose --clean --no-acl --no-owner -h localhost -U [Enter PG Username] -d [Enter PG DB name] latest.dump```
+	pg_restore --verbose --clean --no-acl --no-owner -h localhost -U [Enter PG Username] -d [Enter PG DB name] latest.dump
